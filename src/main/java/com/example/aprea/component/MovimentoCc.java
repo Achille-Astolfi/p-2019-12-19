@@ -19,6 +19,7 @@ public class MovimentoCc {
 	// importo.valueOf
 	
 	// annotation sul getter della data per avere in formato stringa la data sul JSON
+	// viene serializzata come String e uso il pattern ISO anno-mese-giorno
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
 	public Date getDataContabile() {
 		return dataContabile;
