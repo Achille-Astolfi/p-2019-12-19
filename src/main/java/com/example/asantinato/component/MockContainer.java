@@ -1,19 +1,26 @@
 package com.example.asantinato.component;
 
+import com.example.astolfi.component.MovimentiCcController;
+import com.example.astolfi.component.MovimentiCcServiceImpl;
+import com.example.astolfi.component.MovimentoCcFactoryImpl;
+
 public class MockContainer {
 	
 	// container del nostro Controller
 	static MovimentiContoCorrenteController mettiInEsercizi() {
-		// creo un oggetto ServiceImpl
+		// crea un oggetto ServiceImpl
 		MovimentiContoCorrenteServiceImpl serviceImpl = new MovimentiContoCorrenteServiceImpl();
-		
-		// creo un oggetto controller
+		// crea un oggetto Controller
 		MovimentiContoCorrenteController controller = new MovimentiContoCorrenteController();
-		
-		// risolve la dipendenza <use>
+		// risolve la dipendenza <<use>> (del Controller verso il Service)
 		controller.setMovimentiContoCorrenteService(serviceImpl);
-		
-		// ritorno l'oggetto controller
+				
+		// crea un oggetto FactoryImpl
+		MovimentoContoCorrenteFactoryImpl movimentoCcFactoryImpl = new MovimentoContoCorrenteFactoryImpl();
+		// risolve la dipendenza 
+		serviceImpl.setMovimentoCcFactory(movimentoCcFactoryImpl);
+				
+		// mette in esercizio tutti i component (in realtà ci serve solo il Controller)
 		return controller;
 	}
 }
