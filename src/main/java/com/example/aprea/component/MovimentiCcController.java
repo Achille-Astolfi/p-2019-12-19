@@ -5,7 +5,7 @@ import java.util.List;
 public class MovimentiCcController {
 	// come si scrive in java una relazione di <<use>> ?
 	// 1) dichiaro un campo del tipo dell'interface che devo "usare"
-	private MovimentiCcService movimentiCcService;
+	MovimentiCcService movimentiCcService;
 	
 	// 2) se fossi in un vero ambiente containerizzato allora avrei anche finito, ma siccome non mi trovo in un ambiente reale allora simulo l'esistenza di un container
 	// diachiarando un setter per il campo definito al punto 1)

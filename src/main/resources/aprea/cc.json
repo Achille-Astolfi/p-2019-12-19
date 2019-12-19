@@ -1,0 +1,34 @@
+{
+	"numero": 12345684565,
+	"titolare": {
+		"name": "Vincenzo Aprea",
+		"age": 27,
+		"cars": [
+			{
+				"model": "BMW",
+				"km": 1936.4
+			},
+			{
+				"model": "Ferrari",
+				"km": 98506.2
+			}
+		]
+	},
+	"movimenti": [
+		{
+			"dataContabile": 1577574000000,
+			"descrizione": "Accredito stipendio\t",
+			"importo": 4987.65
+		},
+		{
+			"dataContabile": 1576364400000,
+			"descrizione": "Addebito carta di credito",
+			"importo": -1936.27
+		},
+		{
+			"dataContabile": 1576018800000,
+			"descrizione": "Movimento POS Burger King",
+			"importo": -25.0
+		}
+	]
+}
