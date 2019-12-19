@@ -13,12 +13,6 @@ public class MovimentiContoCorrenteController {
 		this.movimentiContoCorrenteService = movimentiContoCorrenteService;
 	}
 	
-	private MovimentoContoCorrenteFactory movimentoContoCorrenteFactory;
-	
-	public void setMovimentoContoCorrenteFactory(MovimentoContoCorrenteFactory movimentoContoCorrenteFactory) {
-		this.movimentoContoCorrenteFactory = movimentoContoCorrenteFactory;
-	}
-	
 	
 	public void mostraMovimentiContoCorrente(String numeric) {
 		List<MovimentoContoCorrente> movimentoCcList = this.movimentiContoCorrenteService.leggiUltimiMovimentiContoCorrente(numeric);
@@ -31,11 +25,6 @@ public class MovimentiContoCorrenteController {
 		}
 	}
 
-
-	public void setMovimentoContoCorrenteFactoryImpl(MovimentoContoCorrenteFactoryImpl factoryImpl) {
-		// TODO Auto-generated method stub
-		
-	}
 
 }
 

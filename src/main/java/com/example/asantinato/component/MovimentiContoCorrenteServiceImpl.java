@@ -9,17 +9,16 @@ import java.util.List;
 // Es: se l'interface si chiama DataScheme, la classe che la implementa si chiamerà DataSchemeImpl
 
 public class MovimentiContoCorrenteServiceImpl implements MovimentiContoCorrenteService {
-	private MovimentoContoCorrenteFactory movimentoContoCorrenteFactory;
-	
+		
 	@Override
 	public List<MovimentoContoCorrente> leggiUltimiMovimentiContoCorrente(String numeroContoCorrente) {
 		
 		// creo un oggetto ArrayList che assegno ad una List
 		List<MovimentoContoCorrente> ccs = new ArrayList<>();
 		
-		ccs.add(movimentoContoCorrenteFactory.creaMovimentoContoCorrente(new Date(2019,11,19), "Movimento POS", -25.00));
-		ccs.add(movimentoContoCorrenteFactory.creaMovimentoContoCorrente(new Date(2019,11,15), "Addebito Carta Di Credito", -1936.27));
-		ccs.add(movimentoContoCorrenteFactory.creaMovimentoContoCorrente(new Date(2019,11,11), "Stipendio", 4987.65));
+		ccs.add(creaMovimentoContoCorrente(new Date(2019,11,19), "Movimento POS", -25.00));
+		ccs.add(creaMovimentoContoCorrente(new Date(2019,11,15), "Addebito Carta Di Credito", -1936.27));
+		ccs.add(creaMovimentoContoCorrente(new Date(2019,11,11), "Stipendio", 4987.65));
 		
 		// restituisco l'oggetto
 		return ccs;
