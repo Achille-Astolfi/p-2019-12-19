@@ -20,7 +20,7 @@ public class CcMain {
 	}
 	
 	public static void main(String[] args) throws IOException {
-		ObjectMapper jackson = new ObjectMapper().setTimeZone(TimeZone.getDefault());
+		ObjectMapper jackson = new ObjectMapper().setTimeZone(TimeZone.getDefault()); // setto la data col TimeZone del mio pc
 		String jsonCc = jackson.writeValueAsString(mockCc());
 		System.out.printf("%s\n", jsonCc);
 		

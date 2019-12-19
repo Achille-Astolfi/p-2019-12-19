@@ -3,6 +3,8 @@ package com.example.aprea.component;
 import java.math.BigDecimal;
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 // Ecco il nostro JavaBean
 public class MovimentoCc {
 	// fino a Java 7 si usava java.util.Date o java.util.GregorianCalendar
@@ -16,6 +18,8 @@ public class MovimentoCc {
 	// importo.doublevalue trasforma in Double
 	// importo.valueOf
 	
+	// annotation sul getter della data per avere in formato stringa la data sul JSON
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
 	public Date getDataContabile() {
 		return dataContabile;
 	}
