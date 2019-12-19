@@ -1,0 +1,22 @@
+{
+	"name": "Onion Knight",
+	"age": 999,
+	"cars": [
+		{
+			"brand": "Lamborghini",
+			"km": 9999.999
+		},
+		{
+			"brand": "Mercedes",
+			"km": 12.0
+		},
+		{
+			"brand": "Bugatti",
+			"km": 41.137
+		},
+		{
+			"brand": "Ferrari",
+			"km": 6501.211
+		}
+	]
+}
