@@ -2,6 +2,8 @@ package com.example.asantinato.component;
 
 import java.util.List;
 
+import com.example.astolfi.component.MovimentiCcServiceImpl;
+
 public class MovimentiContoCorrenteController {
 	
 	// relazione di <use> in Java:
@@ -24,6 +26,7 @@ public class MovimentiContoCorrenteController {
 			System.out.printf(mContoCorrente.getDescrizione(), mContoCorrente.getImporto().doubleValue());
 		}
 	}
+
 
 }
 
