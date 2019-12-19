@@ -8,7 +8,7 @@ public class MockContainer {
 	// mette in esercizio entrambi i componenti
 	
 	// in realtà ci serve solo il Controller, perché il ServiceImpl è a servizio del Controller
-	static MovimentiCcController mettiInEsercizio() {
+	public static MovimentiCcController mettiInEsercizio() {
 		// crea un oggetto ServiceImpl
 		MovimentiCcServiceImpl serviceImpl = new MovimentiCcServiceImpl();
 		// crea un oggetto Controller
@@ -35,4 +35,10 @@ public class MockContainer {
 		return null;
 	}
 	
+	public static MovimentiCcService creaOggettoService() {
+		MovimentiCcServiceImpl serviceImpl = new MovimentiCcServiceImpl();
+		MovimentoCcFactoryImpl factoryImpl = new MovimentoCcFactoryImpl();
+		serviceImpl.setMovimentoCcFactory(factoryImpl);
+		return serviceImpl;
+	}
 }

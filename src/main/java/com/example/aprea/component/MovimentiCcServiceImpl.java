@@ -9,7 +9,7 @@ import java.util.List;
 // Ctrl+1: add unimplemed method
 public class MovimentiCcServiceImpl implements MovimentiCcService {
 
-	private MovimentoCcFactory movimentoCcFactory;
+	MovimentoCcFactory movimentoCcFactory;
 	
 	@Override
 	public List<MovimentoCc> leggiUltimiMovimentiCc(String numeroCc) {
