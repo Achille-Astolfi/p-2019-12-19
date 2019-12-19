@@ -21,11 +21,14 @@ public class MovimentiCcController {
 		List<MovimentoCc> mList = this.movimentiCcService.leggiUltimiMovimentiCc(numeroCc);
 		// Impacchetto il risultato:
 		// nel mondo reale costruisco un HTML, in questa simulazione faccio un printf
-		System.out.printf("Data     \tDescrizione                \tImporto\n");
+		System.out.printf("Data\t\tDescrizione\t\t\tImporto\n");
 		for (MovimentoCc mCc : mList) {
 			// %D: data formattata gg/mm//aa
-			System.out.printf("%tD\t%s\t%,.2f\n", mCc.getDataContabile(), mCc.getDescrizione(), mCc.getImporto().doubleValue());
+//			System.out.printf("%tD\t%s\t%,9.2f\n", mCc.getDataContabile(), mCc.getDescrizione(), mCc.getImporto().doubleValue());
 			// metodo dell'oggetto doublevalue trasforma in Double	
+			System.out.printf("%1$td/%1$tm/%1$tY\t%2$s\t%3$,9.2f\n", mCc.getDataContabile(), mCc.getDescrizione(), mCc.getImporto().doubleValue());
+			// %1$td il primo argomento in formato data giorno, %1$tm il primo argomento in formato data mese ecc.
+			// Y per l'anno con quattro cifre, y con due cifre
 		}
 	}
 }

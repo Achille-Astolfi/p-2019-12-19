@@ -17,9 +17,9 @@ public class MovimentiCcServiceImpl implements MovimentiCcService {
 		// inizializzo la list con tre valori più o meno a caso
 		// uso un costruttore deprecato (che non dovrebbe più essere usato) di Date
 		// (in Java 7 i mesi si contano 0 gennaio, ... 11 dicembre; invece in Java 8 (con LocalDate) 1 gennario, ... 12 dicembre
-		ccs.add(creaMovimentoCc(new Date(2019, 11, 29), "Accredito stipendio      ", 4987.65));
-		ccs.add(creaMovimentoCc(new Date(2019, 11, 15), "Addebito carta di credito", -1936.27));
-		ccs.add(creaMovimentoCc(new Date(2019, 11, 11), "Movimento POS Burger King", -25.00));
+		ccs.add(creaMovimentoCc(new Date(119, 11, 29), "Accredito stipendio\t", 4987.65)); // bisogna togliere 1900 dall'anno
+		ccs.add(creaMovimentoCc(new Date(119, 11, 15), "Addebito carta di credito", -1936.27));
+		ccs.add(creaMovimentoCc(new Date(119, 11, 11), "Movimento POS Burger King", -25.00));
 		// restituisco un riferimento all'oggetto creato
 		return ccs;
 	}
