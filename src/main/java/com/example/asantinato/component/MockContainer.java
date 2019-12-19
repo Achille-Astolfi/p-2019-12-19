@@ -23,4 +23,12 @@ public class MockContainer {
 		// mette in esercizio tutti i component (in realtà ci serve solo il Controller)
 		return controller;
 	}
+	
+	public static MovimentiContoCorrenteServiceImpl creaOggettoServiceImpl() {
+		// TODO Auto-generated method stub
+		MovimentiContoCorrenteServiceImpl serviceImpl = new MovimentiContoCorrenteServiceImpl();
+		MovimentoContoCorrenteFactoryImpl movimentoCcFactoryImpl = new MovimentoContoCorrenteFactoryImpl();
+		serviceImpl.setMovimentoCcFactory(movimentoCcFactoryImpl);
+		return serviceImpl;
+	}
 }

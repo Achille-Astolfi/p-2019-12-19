@@ -1,0 +1,22 @@
+{
+	"name": "Andrea Santinato",
+	"age": 21,
+	"cars": [
+		{
+			"model": "BMW",
+			"km": 1936.4
+		},
+		{
+			"model": "Ferrari",
+			"km": 98586.2
+		},
+		{
+			"model": "Jugar",
+			"km": 18654.4
+		},
+		{
+			"model": "Fiorino a Metano",
+			"km": 85236.1
+		}
+	]
+}

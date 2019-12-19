@@ -4,7 +4,8 @@ import java.util.List;
 
 public class MovimentiCcController {
 	private MovimentiCcService movimentiCcService;
-	
+	private MovimentiCcFactory movFac;
+
 	public void setMovimentiCcService(MovimentiCcService movimentiCcService) {
 		this.movimentiCcService=movimentiCcService;
 	}

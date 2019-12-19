@@ -1,0 +1,18 @@
+{
+	"name": "Mia Mamma",
+	"age": 78,
+	"cars": [
+		{
+			"model": "Jaguar",
+			"km": 9936.4
+		},
+		{
+			"model": "Cayman",
+			"km": 986.2
+		},
+		{
+			"model": "Panda",
+			"km": 100751.8
+		}
+	]
+}
