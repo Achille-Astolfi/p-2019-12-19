@@ -6,7 +6,7 @@ import java.net.URL;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class PersonMain {
-	private static Person mockPerson() {
+	static Person mockPerson() {
 		// so che non si fa così, ma siamo in un mock
 		CarFactory carFactory = new CarFactory();
 		//
