@@ -3,6 +3,8 @@ package com.example.astolfi.component;
 import java.math.BigDecimal;
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 // Ecco il nostro JavaBean
 public class MovimentoCc {
 	// fino a Java 7 si usava java.util.Date o java.util.GregorianCalendar
@@ -14,9 +16,12 @@ public class MovimentoCc {
 	// l'importo, trattandosi di dati contabili, si SCONSIGLIA di usare double
 	// si usa java.math.BigDecimal
 	private BigDecimal importo;
-	
+
 	// getter e setter
 
+	// Annotation spudoratamente copiata dal tutorial
+	// La data contabile viene serializzata come String e uso il pattern ISO anno-mese-giorno
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
 	public Date getDataContabile() {
 		return dataContabile;
 	}

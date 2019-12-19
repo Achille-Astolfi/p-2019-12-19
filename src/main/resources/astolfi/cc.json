@@ -1,0 +1,25 @@
+{
+	"numero": 210987654321,
+	"titolare": {
+		"name": "Mia Nonna",
+		"age": 98,
+		"cars": []
+	},
+	"movimenti": [
+		{
+			"dataContabile": "2019-11-19",
+			"descrizione": "Movimento POS Rinascente",
+			"importo": -25.0
+		},
+		{
+			"dataContabile": "2019-11-15",
+			"descrizione": "Addebito carta credito",
+			"importo": -1936.27
+		},
+		{
+			"dataContabile": "2019-11-11",
+			"descrizione": "Accredito pensione",
+			"importo": 4987.65
+		}
+	]
+}
