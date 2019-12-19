@@ -16,7 +16,13 @@ public class MockContainer {
 		MovimentiCcController controller = new MovimentiCcController();
 		// risolve la dipendenza <<use>> (del Controller verso il Service)
 		controller.setMovimentiCcService(serviceImpl);
-		// mette in esercizio entrambi i component (in realtà ci serve solo il Controller)
+		
+		// crea un oggetto FactoryImpl
+		MovimentoCcFactoryImpl movimentoCcFactoryImpl = new MovimentoCcFactoryImpl();
+		// risolve la dipendenza 
+		serviceImpl.setMovimentoCcFactory(movimentoCcFactoryImpl);
+		
+		// mette in esercizio tutti i component (in realtà ci serve solo il Controller)
 		return controller;
 	}
 }

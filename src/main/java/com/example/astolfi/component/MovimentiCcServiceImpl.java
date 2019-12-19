@@ -8,6 +8,11 @@ import java.util.List;
 // Seconda scuola di pensiero (che è la scuola di pensiero adottata da Spring)
 // Se l'interface si chiama Pippo, la class che la implementa si chiama PippoImpl
 public class MovimentiCcServiceImpl implements MovimentiCcService {
+	private MovimentoCcFactory movimentoCcFactory;
+
+	public void setMovimentoCcFactory(MovimentoCcFactory movimentoCcFactory) {
+		this.movimentoCcFactory = movimentoCcFactory;
+	}
 
 	@Override
 	public List<MovimentoCc> leggiUltimiMovimentiCc(String numeroCc) {
@@ -19,24 +24,11 @@ public class MovimentiCcServiceImpl implements MovimentiCcService {
 		// ma siccome è un mock allora lo uso lo stesso
 		// nota: in Java 7 i mesi si contano 0 gennaio, 1 febbraio... 11 dicembre
 		// invece in Java 8 (con LocalDate) 1 gennaio, 2 febbraio... 12 dicembre
-		ccs.add(creaMovimentoCc(new Date(119, 11, 19), "Movimento POS Burgers", -25.00));
-		ccs.add(creaMovimentoCc(new Date(119, 11, 15), "Addebito carta credito", -1936.27));
-		ccs.add(creaMovimentoCc(new Date(119, 11, 11), "Accredito stipendio", 4987.65));
+		ccs.add(movimentoCcFactory.creaMovimentoCc(new Date(119, 11, 19), "Movimento POS Burgers", -25.00));
+		ccs.add(movimentoCcFactory.creaMovimentoCc(new Date(119, 11, 15), "Addebito carta credito", -1936.27));
+		ccs.add(movimentoCcFactory.creaMovimentoCc(new Date(119, 11, 11), "Accredito stipendio", 4987.65));
 		// restituisco un riferimento all'oggetto creato
 		return ccs;
-	}
-	
-	// per semplificare le operazioni di Mock ci facciamo un metodo così:
-	private MovimentoCc creaMovimentoCc(Date data, String desc, double importo) {
-		// creo l'oggetto
-		MovimentoCc mCc = new MovimentoCc();
-		// inizializzo l'oggetto
-		mCc.setDataContabile(data);
-		mCc.setDescrizione(desc);
-		// converto double in BigDecimal col metodo della class: valueOf
-		mCc.setImporto(BigDecimal.valueOf(importo));
-		// restituisco il riferimento all'oggetto
-		return mCc;
 	}
 
 }
