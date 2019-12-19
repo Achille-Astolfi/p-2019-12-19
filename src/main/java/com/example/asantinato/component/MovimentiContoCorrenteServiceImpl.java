@@ -9,7 +9,7 @@ import java.util.List;
 // Es: se l'interface si chiama DataScheme, la classe che la implementa si chiamerà DataSchemeImpl
 
 public class MovimentiContoCorrenteServiceImpl implements MovimentiContoCorrenteService {
-	
+		
 	@Override
 	public List<MovimentoContoCorrente> leggiUltimiMovimentiContoCorrente(String numeroContoCorrente) {
 		
