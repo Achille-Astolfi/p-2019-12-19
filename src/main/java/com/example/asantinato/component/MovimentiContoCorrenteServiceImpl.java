@@ -12,7 +12,7 @@ import com.example.astolfi.component.MovimentoCcFactory;
 
 public class MovimentiContoCorrenteServiceImpl implements MovimentiContoCorrenteService {
 	
-	private MovimentoContoCorrenteFactoryImpl movimentoCcFactory;
+	public MovimentoContoCorrenteFactoryImpl movimentoCcFactory;
 
 	public void setMovimentoCcFactory(MovimentoContoCorrenteFactoryImpl movimentoCcFactoryImpl) {
 		this.movimentoCcFactory = movimentoCcFactoryImpl;
